@@ -1,30 +1,31 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // your code here
+document.addEventListener('DOMContentLoaded', () => {
 
-  const newTaskForm = document.getElementById('create-task-form');
+  const createTaskForm = document.getElementById('create-task-form')
   const newTaskDescription = document.getElementById('new-task-description')
+  const ul = document.getElementById('tasks')
 
-  const myTasksUl = document.getElementById('tasks')
-  
-  newTaskForm.addEventListener('submit', createNewTasks)
+  document.addEventListener('submit', createNewTasks)
 
-});
+  function createNewTasks(e){
+    e.preventDefault();
+    const newTask = document.createElement('li')
+    newTask.innerHTML = newTaskDescription.value
 
-const createNewTasks = event => {
-  event.preventDefault();
+    appendNewTask(newTask)
+    e.target.reset()
 
-  const newTaskDescription = document.getElementById('new-task-description')
-  const newTask = document.createElement('li')
+  }
 
-  newTask.innerText = newTaskDescription.value
+  function appendNewTask(newTask){
+   ul.append(newTask)
+  }
 
-  appendNewTask(newTask);
-  event.target.reset();
+})
 
 
-}
 
-const appendNewTask = task => {
-  document.getElementById('tasks').appendChild(task)
-}
+
+
+
+
 
