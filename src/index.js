@@ -1,30 +1,30 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // your code here
+// document.addEventListener("DOMContentLoaded", () => {
+//   // your code here
 
-  const newTaskForm = document.getElementById('create-task-form');
-  const newTaskDescription = document.getElementById('new-task-description')
+//   const newTaskForm = document.getElementById('create-task-form');
+//   const newTaskDescription = document.getElementById('new-task-description')
 
-  const myTasksUl = document.getElementById('tasks')
+//   const myTasksUl = document.getElementById('tasks')
   
-  newTaskForm.addEventListener('submit', createNewTasks)
+//   newTaskForm.addEventListener('submit', createNewTasks)
 
-});
+// });
 
-const createNewTasks = event => {
-  event.preventDefault();
+// const createNewTasks = event => {
+//   event.preventDefault();
 
-  const newTaskDescription = document.getElementById('new-task-description')
-  const newTask = document.createElement('li')
+//   const newTaskDescription = document.getElementById('new-task-description')
+//   const newTask = document.createElement('li')
 
-  newTask.innerText = newTaskDescription.value
+//   newTask.innerText = newTaskDescription.value
 
-  appendNewTask(newTask);
-  event.target.reset();
+//   appendNewTask(newTask);
+//   event.target.reset();
 
 
-}
+// }
 
-const appendNewTask = task => {
-  document.getElementById('tasks').appendChild(task)
-}
+// const appendNewTask = task => {
+//   document.getElementById('tasks').appendChild(task)
+// }
 
